@@ -49,7 +49,7 @@ namespace AssignmentThreeAndFour
                     }
                     else if(unit == 0 && hundred == 0 && ten == 0)
                     {
-                    Console.WriteLine($"{ones[digit-1]}");
+                        Console.WriteLine($"{ones[digit-1]} thousand");
                     }
 
 
@@ -75,6 +75,10 @@ namespace AssignmentThreeAndFour
                     {
                         Console.WriteLine($"{ones[hundred - 1]} hundred and {tens[ten-1]} ");
                     }
+                    else if(ten == 0 && unit != 0) {
+                        Console.WriteLine($"{ones[hundred - 1]} hundred and {ones[unit - 1]}");
+                    }
+
 
 
                     
