@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AssignmentThreeAndFour
 {
@@ -29,14 +30,27 @@ namespace AssignmentThreeAndFour
                     string ten_digit = number[2].ToString();
                     int ten = int.Parse(ten_digit);
                     string units  = number[3].ToString();
-                     int unit = int.Parse(units);  
-                    if (int.Parse(units) == 0){
+                    int unit = int.Parse(units); 
+                
+
+                    if (unit == 0){
                         Console.WriteLine($"{ones[digit-1]} thousand {ones[hundred-1]} hundred and {tens[ten-1]}");
                     }
-                    else if(!(ten==0) && !(hundred==0))
+                    else if(!(ten==0) && !(hundred==0) && !(unit==0))
                     {
                         Console.WriteLine($"{ones[digit-1]} thousand {ones[hundred-1]} hundred and {tens[ten -1]} {ones[unit-1]}");
-                }
+                    }
+                    else if (ten == 0 && hundred == 0) {
+                        Console.WriteLine($"{ones[digit - 1]} thousand and {ones[unit-1]}");
+                        
+                    }
+                    else if (unit==0 && hundred==0) {
+                        Console.WriteLine($"{ones[digit-1]} thousand and {tens[ten-1]}");
+                    }
+                    else if(unit == 0 && hundred == 0 && ten == 0)
+                    {
+                    Console.WriteLine($"{ones[digit-1]}");
+                    }
 
 
             }
@@ -48,6 +62,22 @@ namespace AssignmentThreeAndFour
                     int ten = int.Parse(ten_digit);
                     string units = number[2].ToString();
                     int unit = int.Parse(units);
+                    if(!(ten==0) && !(unit == 0)) {
+                        Console.WriteLine($"{ones[hundred - 1]} hundred {tens[ten - 1]} {ones[unit - 1]}");
+
+                    }
+                    else if(ten==0 && unit == 0)
+                    {
+                      Console.WriteLine($"{ones[hundred - 1]} hundred");
+
+                    }
+                    else if(unit==0)
+                    {
+                        Console.WriteLine($"{ones[hundred - 1]} hundred and {tens[ten-1]} ");
+                    }
+
+
+                    
 
             }
                 else if (number.Length == 2)
@@ -84,21 +114,19 @@ namespace AssignmentThreeAndFour
 
                 else if (number.Length == 1 )
                 {
-                    int digit = int.Parse(number);
-                    Console.WriteLine(ones[digit-1]);
-                }
-
-            
-
-
-
+                    if (int.Parse(number) == 0)
+                    {
+                        Console.WriteLine("zero");
+                    }
+                    else
+                    {
+                        int digit = int.Parse(number);
+                        Console.WriteLine(ones[digit - 1]);
+                    }
+              }
+                
 
         }
     }
-
-
-
-
-
 }
 
