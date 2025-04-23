@@ -1,49 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AssignmentThreeAndFour
 {
     internal class HotelManSys
     {
         private string[] staff = { "Abongile", "Theo" };
-        private DateTime checkintime;
-        private string checkoutime;
+        DateTime checkintime =new DateTime();
+        DateTime checkoutTime = new DateTime();
         private int period;
         private string guest;
         private Dictionary<string, bool> rooms = new Dictionary<string, bool>
         {
-            {"FIL0",true},{"FIL1",true},{"FIL2",true}
+            {"FIL0", true}, {"FIL1", true}, {"FIL2", true}, {"FIL3",true}
         };
 
+        public HotelManSys()
+        {
 
-
-        public HotelManSys( Dictionary<bool, string> rooms, string[] staff, DateTime checkintime)
+        }
+        public HotelManSys(string[] staff, DateTime checkinTime)
         {
             this.staff = staff;
-            this.checkintime = DateTime.Now;
+            
         }
 
-        public string BookRoom(int room)
+        public string BookRoom(int roomNumber,int id)
         {
+            string roomKey = $"FIL{roomNumber}";
 
-            for (int i = 0; i < rooms.Count; i++)
+  
+            
+
+            if (rooms.ContainsKey(roomKey) ) 
             {
-                if (rooms.TryGetValue($"FIL{i}", out true))
+                if (rooms[roomKey]) 
                 {
-
+                    rooms[roomKey] = false; 
+                    checkintime = (DateTime.Now).ToLocalTime();
+                    return $"Room {roomKey} successfully booked! by {(staff[id])} at {checkintime.}";
+                }
+                else
+                {
+                    return $"Room {roomKey} is already booked.";
                 }
             }
-
+            else
+            {
+                return "Invalid room number.";
+            }
         }
 
+        
+        public string CheckoutRoom(int roomNumber)
+        {
+            string roomKey = $"FIL{roomNumber}"; 
 
+            if (rooms.ContainsKey(roomKey)) 
+            {
+                if (!rooms[roomKey]) 
+                {
+                    rooms[roomKey] = true;
+                    checkoutTime = (DateTime.Now).ToLocalTime();
 
+                    return $"Room {roomKey} successfully checked out! at {checkoutTime}";
+                }
+                else
+                {
+                    return $"Room {roomKey} is already available.";
+                }
+            }
+            else
+            {
+                return "Invalid room number.";
+            }
+        }
 
-
-
-
+        //methods to check the availability of rooms, etc.
+        public void PrintRoomStatus()
+        {
+            foreach (var room in rooms)
+            {
+                Console.WriteLine($"Room {room.Key}: {(room.Value ? "Available" : "Booked")}");
+            }
+        }
     }
+
+
 }
