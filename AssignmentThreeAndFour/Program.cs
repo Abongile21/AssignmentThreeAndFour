@@ -16,7 +16,8 @@ namespace AssignmentThreeAndFour
             {
                 Console.WriteLine("Enter number to convert (0 - 9999):");
                 string number = Console.ReadLine();
-                NumberToWords.ToWords(number);
+                NumberToWords numberText = new NumberToWords();
+                numberText.ToWords(number);
                 
                 
                 
