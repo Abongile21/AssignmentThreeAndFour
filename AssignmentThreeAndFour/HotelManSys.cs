@@ -38,7 +38,7 @@ namespace AssignmentThreeAndFour
                 {
                     rooms[roomKey] = false; 
                     checkintime = (DateTime.Now).ToLocalTime();
-                    return $"Room {roomKey} successfully booked! by {(staff[id])} at {checkintime.}";
+                    return $"Room {roomKey} successfully booked! by {(staff[id])} at {checkintime}";
                 }
                 else
                 {
@@ -76,7 +76,6 @@ namespace AssignmentThreeAndFour
             }
         }
 
-        //methods to check the availability of rooms, etc.
         public void PrintRoomStatus()
         {
             foreach (var room in rooms)
