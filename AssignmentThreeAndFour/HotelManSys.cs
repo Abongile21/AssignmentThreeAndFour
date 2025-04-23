@@ -8,8 +8,6 @@ namespace AssignmentThreeAndFour
         private string[] staff = { "Abongile", "Theo" };
         DateTime checkintime =new DateTime();
         DateTime checkoutTime = new DateTime();
-        private int period;
-        private string guest;
         private Dictionary<string, bool> rooms = new Dictionary<string, bool>
         {
             {"FIL0", true}, {"FIL1", true}, {"FIL2", true}, {"FIL3",true}
@@ -25,7 +23,7 @@ namespace AssignmentThreeAndFour
             
         }
 
-        public string BookRoom(int roomNumber,int id)
+        public string BookRoom(int roomNumber,int id, string guest)
         {
             string roomKey = $"FIL{roomNumber}";
 
@@ -38,7 +36,7 @@ namespace AssignmentThreeAndFour
                 {
                     rooms[roomKey] = false; 
                     checkintime = (DateTime.Now).ToLocalTime();
-                    return $"Room {roomKey} successfully booked! by {(staff[id])} at {checkintime}";
+                    return $"{roomKey} successfully booked! by {guest} through {(staff[id])} at {checkintime}";
                 }
                 else
                 {
@@ -78,11 +76,26 @@ namespace AssignmentThreeAndFour
 
         public void PrintRoomStatus()
         {
+
+            Console.WriteLine("-------------------Room statuses-----------------");
             foreach (var room in rooms)
             {
+
+                
                 Console.WriteLine($"Room {room.Key}: {(room.Value ? "Available" : "Booked")}");
             }
         }
+
+        public void writetoFile()
+        {
+            using (StreamWriter writetext = new StreamWriter("C:\\Users\\Abongile_Theo\\LearnNet\\AssignmentThreeAndFour\\AssignmentThreeAndFour\\hotel.txt"))
+            {   
+                writetext.WriteLine("-------------------Room statuses-----------------");
+                foreach (var room in rooms)
+                    writetext.WriteLine($"Room {room.Key}: {(room.Value ? "Available" : "Booked")}");
+            }
+        }
+        
     }
 
 

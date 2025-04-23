@@ -1,0 +1,5 @@
+-------------------Room statuses-----------------
+Room FIL0: Available
+Room FIL1: Available
+Room FIL2: Available
+Room FIL3: Available
