@@ -88,6 +88,7 @@ namespace AssignmentThreeAndFour
 
         public void writetoFile()
         {
+            //please enter you own location for the file
             using (StreamWriter writetext = new StreamWriter("C:\\Users\\Abongile_Theo\\LearnNet\\AssignmentThreeAndFour\\AssignmentThreeAndFour\\hotel.txt"))
             {   
                 writetext.WriteLine("-------------------Room statuses-----------------");
