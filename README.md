@@ -1,7 +1,6 @@
 ﻿# WELCOME TO MY CONSOLE SYSTEM
 
 ---
----
 ## Note that this is a console app so:
 - First clone the app "git clone **repo url**".
 - Run it and choose either option 1 or 2.
@@ -15,7 +14,6 @@
 - Enter the number you want to convert to words.
 - voila!
 ---
-
 ## 2.Hotel management system
 
 ### $${\color{aquamarine}make\space sure \space you \space choose \space an \space  options \space below \space or \space enter \space exit \space to  \space leave \space the \space program}$$	
