@@ -15,7 +15,7 @@
 
 ## 2.Hotel management system
 
-$${\color{*make sure you choose an options below or enter exit to leave the program*}Red}$$	
+$${\color{make sure you choose an options below or enter exit to leave the program}Red}$$	
 
 
 1. Check-in- to check in the guest and log the time , the mark the room booked and show who assisted the guest.
