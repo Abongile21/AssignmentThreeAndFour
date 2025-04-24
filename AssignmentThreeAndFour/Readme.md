@@ -18,7 +18,7 @@
 *make sure you choose an options below or enter exit to leave the program*
 
 
--1.Check-in- to check in the guest and log the time , the mark the room booked and show who assisted the guest.
--2.Check-out- to check out the guest and log the time , the mark the room available.
--3.Write statuses to console.
--4.Write to text file the room statuses - **here on HotelManSys use your machine's location for the text file- but first create the txt**.
+- 1.Check-in- to check in the guest and log the time , the mark the room booked and show who assisted the guest.
+- 2.Check-out- to check out the guest and log the time , the mark the room available.
+- 3.Write statuses to console.
+- 4.Write to text file the room statuses - **here on HotelManSys use your machine's location for the text file- but first create the txt**.
