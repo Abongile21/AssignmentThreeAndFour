@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Runtime.Intrinsics.X86;
 using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 
 namespace AssignmentThreeAndFour
@@ -31,7 +30,7 @@ namespace AssignmentThreeAndFour
                 string number = Console.ReadLine();
                 Console.ResetColor();
                 NumberToWords numberText = new NumberToWords();
-                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.ForegroundColor = ConsoleColor.Green;
                 numberText.ToWords(number);
                 Console.ResetColor();
 

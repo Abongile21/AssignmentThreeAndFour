@@ -5,14 +5,14 @@ namespace AssignmentThreeAndFour
 {
     internal class HotelManSys
     {
-        private string[] staff = { "Abongile", "Theo" };
+        private string[] staff = { "Abongile", "Theo", "Me" };
         DateTime checkintime =new DateTime();
         DateTime checkoutTime = new DateTime();
         private Dictionary<string, bool> rooms = new Dictionary<string, bool>
         {
             {"FIL0", true}, {"FIL1", true}, {"FIL2", true}, {"FIL3",true}
         };
-
+       
         public HotelManSys()
         {
 

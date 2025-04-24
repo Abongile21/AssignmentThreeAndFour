@@ -6,11 +6,11 @@ namespace AssignmentThreeAndFour
     public class NumberToWords
 
     {
-        private string[] ones = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+        private string[] ones = { "One", "Two", "Three", "Tour", "Five", "Six", "Seven", "Eight", "Nine" };
 
-        private string[] others = {"eleven", "twelve","thirteen","fourteen", "fifteen","sixteen","seventeen","eighteen","nineteen"};
+        private string[] others = {"Eleven", "Twelve","Thirteen","Fourteen", "Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
 
-        private string[] tens = { "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+        private string[] tens = { "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
         //private static string[] hundreds = { "hundred", "thousand" };
 
 
@@ -48,7 +48,7 @@ namespace AssignmentThreeAndFour
                     }
                     else if (unit == 0 && hundred == 0 && ten == 0)
                     {
-                        Console.WriteLine($"{ones[digit - 1]} thousand")        ;
+                        Console.WriteLine($"{ones[digit - 1]} thousand");
                     }
                 }
 
@@ -61,7 +61,7 @@ namespace AssignmentThreeAndFour
                     string units = number[2].ToString();
                     int unit = int.Parse(units);
                     if (!(ten == 0) && !(unit == 0)) {
-                        Console.WriteLine($"{ones[hundred - 1]} hundred {tens[ten - 1]} {ones[unit - 1]}");
+                        Console.WriteLine($"{ones[hundred - 1]} hundred and {tens[ten - 1]} {ones[unit - 1]}");
                     }
                     else if (ten == 0 && unit == 0)
                     {
@@ -72,7 +72,7 @@ namespace AssignmentThreeAndFour
                         Console.WriteLine($"{ones[hundred - 1]} hundred and {tens[ten - 1]} ");
                     }
                     else if (ten == 0 && unit != 0) {
-                        Console.WriteLine($"{ones[hundred - 1]} hundred and {ones[unit - 1]}")          ;
+                        Console.WriteLine($"{ones[hundred - 1]} hundred and {ones[unit - 1]}");
                     }
                 }
 
