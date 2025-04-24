@@ -116,7 +116,7 @@ namespace AssignmentThreeAndFour
             }
             else
             {
-                Console.WriteLine("Use a valid number between 0-9999!");
+                Console.WriteLine("Use a valid number between 0-9999 !");
                 Console.Beep();
             }
         }

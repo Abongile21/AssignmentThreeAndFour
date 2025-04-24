@@ -8,6 +8,7 @@ namespace AssignmentThreeAndFour
         private string[] staff = { "Abongile", "Theo", "Me" };
         DateTime checkintime =new DateTime();
         DateTime checkoutTime = new DateTime();
+        private string path = "C:\\Users\\Abongile_Theo\\LearnNet\\AssignmentThreeAndFour\\AssignmentThreeAndFour\\hotel.txt";
         private Dictionary<string, bool> rooms = new Dictionary<string, bool>
         {
             {"FIL0", true}, {"FIL1", true}, {"FIL2", true}, {"FIL3",true}
@@ -61,7 +62,9 @@ namespace AssignmentThreeAndFour
                     rooms[roomKey] = true;
                     checkoutTime = (DateTime.Now).ToLocalTime();
 
-                    return $"Room {roomKey} successfully checked out! at {checkoutTime}";
+                    return $" Guest at Room-{roomKey} successfully checked out! at {checkoutTime}\n"+
+                        "Thank for staying with us!!"; ;
+                    
                 }
                 else
                 {
@@ -88,12 +91,17 @@ namespace AssignmentThreeAndFour
 
         public void writetoFile()
         {
-            //please enter you own location for the file
-            using (StreamWriter writetext = new StreamWriter("C:\\Users\\Abongile_Theo\\LearnNet\\AssignmentThreeAndFour\\AssignmentThreeAndFour\\hotel.txt"))
+            
+           
+            using (StreamWriter writetext = new StreamWriter(path, append: true))
+
             {   
-                writetext.WriteLine("-------------------Room statuses-----------------");
+                writetext.WriteLine($"-------------------Room statuses----------------- at {(DateTime.Now).ToLocalTime()} ----");
                 foreach (var room in rooms)
-                    writetext.WriteLine($"Room {room.Key}: {(room.Value ? "Available" : "Booked")}");
+                {
+                    writetext.WriteLine($"Room {room.Key}: {(room.Value ? "Available" : "Booked")} ");
+                }
+               
             }
         }
         

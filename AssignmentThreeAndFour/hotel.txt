@@ -1,5 +1,35 @@
--------------------Room statuses-----------------
-Room FIL0: Available
-Room FIL1: Available
-Room FIL2: Available
-Room FIL3: Available
+-------------------Room statuses----------------- at 2025/04/24 15:32:14 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:33:41 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:34:07 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:34:09 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:34:10 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:34:11 ----
+Room FIL0: Booked 
+Room FIL1: Available 
+Room FIL2: Booked 
+Room FIL3: Available 
+-------------------Room statuses----------------- at 2025/04/24 15:45:10 ----
+Room FIL0: Available 
+Room FIL1: Booked 
+Room FIL2: Available 
+Room FIL3: Available 

@@ -66,23 +66,27 @@ namespace AssignmentThreeAndFour
 
                     if (int.Parse(answer) == 1)
                     {
-                        Console.WriteLine("Please enter your staff number:");
+                        Console.WriteLine("Please enter your staff number (0-2):");
                         string id = Console.ReadLine();
 
-                        Console.WriteLine("Enter the room number:");
+                        Console.WriteLine("Enter the room number (0-3):");
                         string roomNumber = Console.ReadLine();
 
-                        Console.WriteLine("Enter the guest's name:");
+                        Console.WriteLine("Enter the guest's names:");
                         string guest = Console.ReadLine();
                         Console.WriteLine(hotel.BookRoom(int.Parse(roomNumber), int.Parse(id), guest));
 
                     }
                     else if (int.Parse(answer) == 2)
                     {
-                        Console.WriteLine(hotel.CheckoutRoom(1));
+                           Console.WriteLine("Enter the room number to checkout the guest");
+                           string roomNumber = Console.ReadLine();
+                           Console.WriteLine(hotel.CheckoutRoom(int.Parse(roomNumber)));
+                           
 
 
-                    }
+
+                        }
                     else if (int.Parse(answer) == 3)
                     {
                         hotel.PrintRoomStatus();
