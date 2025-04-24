@@ -13,7 +13,7 @@
 - Enter the number you want to convert to words.
 - voila!
 
-## 2.Hotel management system- 
+## 2.Hotel management system
 
 *make sure you choose an options below or enter exit to leave the program*
 
