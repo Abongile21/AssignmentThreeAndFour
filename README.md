@@ -1,16 +1,13 @@
 ﻿# WELCOME TO MY CONSOLE SYSTEM
 
 ---
-## Note that this is a console app so:
+## Note that this is a console app so
 - First clone the app "git clone **repo url**".
 - Run it and choose either option 1 or 2.
 ---
 ## 1.Number to words
-
 **This system takes input as number the  returns it words**
-
 ### Manual:
-
 - Enter the number you want to convert to words.
 - voila!
 ---
