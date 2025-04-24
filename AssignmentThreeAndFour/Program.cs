@@ -79,7 +79,7 @@ namespace AssignmentThreeAndFour
                     }
                     else if (int.Parse(answer) == 2)
                     {
-                           Console.WriteLine("Enter the room number to checkout the guest");
+                           Console.WriteLine("Enter the room number to checkout the guest:");
                            string roomNumber = Console.ReadLine();
                            Console.WriteLine(hotel.CheckoutRoom(int.Parse(roomNumber)));
                            
