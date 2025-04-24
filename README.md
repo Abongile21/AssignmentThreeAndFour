@@ -14,9 +14,7 @@
 - voila!
 
 ## 2.Hotel management system
-<code style="color : red">
-*make sure you choose an options below or enter exit to leave the program*
-</code>
+<code style="color : red">*make sure you choose an options below or enter exit to leave the program*</code>
 
 
 
