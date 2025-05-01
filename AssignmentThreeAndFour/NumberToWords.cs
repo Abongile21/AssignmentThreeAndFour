@@ -39,6 +39,9 @@ namespace AssignmentThreeAndFour
                     {
                         Console.WriteLine($"{ones[digit - 1]} thousand {ones[hundred - 1]} hundred and {tens[ten - 1]} {ones[unit - 1]}");
                     }
+                    else if(ten==0){
+                        Console.WriteLine($"{ones[digit - 1]} thousand {ones[hundred - 1]} hundred and {ones[unit - 1]}");
+                    }
                     else if (ten == 0 && hundred == 0) {
                         Console.WriteLine($"{ones[digit - 1]} thousand and {ones[unit - 1]}");
 
